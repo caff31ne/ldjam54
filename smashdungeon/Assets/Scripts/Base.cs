@@ -16,7 +16,7 @@ public class Base : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        var scaleIncrease = new Vector3(Time.deltaTime / 2, 0, 0);
+        var scaleIncrease = new Vector3(Time.deltaTime / 10, 0, 0);
         topWall.localScale += scaleIncrease;
         bottomWall.localScale += scaleIncrease;
         leftWall.localScale += scaleIncrease;
