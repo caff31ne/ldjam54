@@ -1,11 +1,7 @@
-using System;
 using UnityEngine;
 
 class Enemy: MonoBehaviour {
     
-    public float initialSpeedX = 1.0f;
-    public float initialSpeedY = 1.0f;
-
     private Rigidbody2D _rb;
 
     private void Awake()
@@ -15,7 +11,7 @@ class Enemy: MonoBehaviour {
 
     private void Start()
     {
-        _rb.velocity = new Vector2(initialSpeedX, initialSpeedY);
+        _rb.velocity = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
     }
 
     private void Update() {
