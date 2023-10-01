@@ -77,8 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.754717, g: 0.11747954, b: 0.23459451, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +104,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 62638546d8b334d7d8202919f4944b68, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -128,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0411d13427294d8cbe6b24435757c766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!58 &113164888311341012
 CircleCollider2D:
   m_ObjectHideFlags: 0
