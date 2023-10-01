@@ -20,8 +20,8 @@ public class Base : MonoBehaviour
     private void SpawnEnemy()
     {
         var enemy = Instantiate(enemyPrototype, transform);
-        enemy.transform.position = new Vector3(Random.Range(-10.0f, 10.0f),
-            Random.Range(-10.0f, 10.0f), 0);
+        enemy.transform.position = new Vector3(Random.Range(-12.0f, 12.0f),
+            Random.Range(-8.0f, 8.0f), 0);
     }
 
     // Update is called once per frame
