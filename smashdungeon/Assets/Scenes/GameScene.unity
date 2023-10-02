@@ -318,7 +318,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320416397
 MonoBehaviour:
@@ -1041,8 +1041,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1361,7 +1361,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 300, y: 40}
+  m_SizeDelta: {x: 300, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1536692676
 MonoBehaviour:
@@ -1631,6 +1631,7 @@ MonoBehaviour:
   speed: 10
   health: 100
   hud: {fileID: 2008695500}
+  basket: {fileID: 2040111778}
 --- !u!114 &1902216531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2054,7 +2055,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: 0a416586-79ed-49d1-8075-f5c61f60eefe
+  m_DefaultActionMap: Basket
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!58 &2040111777
