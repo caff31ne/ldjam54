@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HUD: MonoBehaviour {
 
-    public GameObject endGameDialog;
+    public GameEndDialog endGameDialog;
     public Base gameBase;
 
     void Start() {}
@@ -10,7 +10,7 @@ public class HUD: MonoBehaviour {
     void Update() {}
 
     public void OnGameOver() {
-        endGameDialog.SetActive(false);
+        endGameDialog.gameObject.SetActive(false);
         gameBase.Restart();
     }
 }

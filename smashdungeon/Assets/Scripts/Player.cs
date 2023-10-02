@@ -58,7 +58,8 @@ public class Player: MonoBehaviour {
 
             if (health <= 0) {
                 Base.pause = true;
-                hud.endGameDialog.SetActive(true);
+                hud.endGameDialog.gameObject.SetActive(true);
+                hud.endGameDialog.title.text = "You lose!";
             }
         }
     }

@@ -8,6 +8,11 @@ public class Base: MonoBehaviour
     public Transform rightWall;
     public Transform enemyPrototype;
 
+    private Vector3 topWallOriginalScale = Vector3.zero;
+    private Vector3 bottomWallOriginalScale = Vector3.zero;
+    private Vector3 leftWallOriginalScale = Vector3.zero;
+    private Vector3 rightWallOriginalScale = Vector3.zero;
+
     public Player player;
 
     public static bool pause = false;
@@ -15,6 +20,10 @@ public class Base: MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        topWallOriginalScale = topWall.localScale;
+        bottomWallOriginalScale = bottomWall.localScale;
+        leftWallOriginalScale = leftWall.localScale;
+        rightWallOriginalScale = rightWall.localScale;
         SpawnEnemies();
     }
 
@@ -51,5 +60,9 @@ public class Base: MonoBehaviour
 
         player.health = 100;
         pause = false;
+        topWall.localScale = topWallOriginalScale;
+        bottomWall.localScale = bottomWallOriginalScale;
+        leftWall.localScale = leftWallOriginalScale;
+        rightWall.localScale = rightWallOriginalScale;
     }
 }

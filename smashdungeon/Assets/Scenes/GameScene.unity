@@ -929,6 +929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897921302}
+  - component: {fileID: 897921303}
   m_Layer: 5
   m_Name: GameOverDialog
   m_TagString: Untagged
@@ -957,6 +958,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &897921303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897921301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7bba9d1c1965383b737b3685c27d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 1014366191}
 --- !u!1 &1014366189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,7 +1889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157e8092986576f982cf17917ff16d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endGameDialog: {fileID: 897921301}
+  endGameDialog: {fileID: 897921303}
   gameBase: {fileID: 737941230}
 --- !u!1 &2040111770
 GameObject:
@@ -2106,6 +2120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  hud: {fileID: 2008695500}
 --- !u!1 &2098263747
 GameObject:
   m_ObjectHideFlags: 0
