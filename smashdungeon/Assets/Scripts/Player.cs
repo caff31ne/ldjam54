@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-class Player: MonoBehaviour {
+public class Player: MonoBehaviour {
 
     public float speed = 10f;
     public float health = 100f;
@@ -9,9 +9,14 @@ class Player: MonoBehaviour {
     private const string EnemyTag = "Enemy";
     
     private Rigidbody2D _rb;
+
+    public HUD hud;
+
+    public Basket basket;
     
     private void Start()
     {
+        Debug.Log("Basket start");
     }
 
     private void Update()
@@ -25,8 +30,23 @@ class Player: MonoBehaviour {
 
     private void OnMove(InputValue input)
     {
+        if (Base.pause) {
+            _rb.velocity = Vector2.zero;
+            return;
+        }
         var velocity = input.Get<Vector2>();
         _rb.velocity = velocity * speed;
+    }
+
+    void OnLeftMove(InputValue input) {
+        if (Base.pause) {
+            basket.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            return;
+        }
+
+        var velocity = input.Get<Vector2>();
+
+        basket.GetComponent<Rigidbody2D>().velocity = velocity * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,7 +54,12 @@ class Player: MonoBehaviour {
         if (other.CompareTag(EnemyTag))
         {
             health -= HealthDecrease;
-            Debug.Log("Collision");
+            //Debug.Log("Collision");
+
+            if (health <= 0) {
+                Base.pause = true;
+                hud.endGameDialog.SetActive(true);
+            }
         }
     }
 

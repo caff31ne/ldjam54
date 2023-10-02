@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class Base : MonoBehaviour
+public class Base: MonoBehaviour
 {
     public Transform topWall;
     public Transform bottomWall;
     public Transform leftWall;
     public Transform rightWall;
     public Transform enemyPrototype;
+
+    public Player player;
+
+    public static bool pause = false;
     
     // Start is called before the first frame update
     private void Start()
     {
+        SpawnEnemies();
+    }
+
+    private void SpawnEnemies() {
         for (int i = 0; i < 10; i++)
         {
             SpawnEnemy();
@@ -27,10 +35,21 @@ public class Base : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        var scaleIncrease = new Vector3(Time.deltaTime / 10, 0, 0);
+        var scaleIncrease = new Vector3(Time.deltaTime / 5, 0, 0);
         topWall.localScale += scaleIncrease;
         bottomWall.localScale += scaleIncrease;
         leftWall.localScale += scaleIncrease;
         rightWall.localScale += scaleIncrease;
+    }
+
+    public void Restart() {
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies) {
+            GameObject.Destroy(enemy.gameObject);
+        }
+        SpawnEnemies();
+
+        player.health = 100;
+        pause = false;
     }
 }

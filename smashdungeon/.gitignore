@@ -77,3 +77,6 @@ crashlytics-build.properties
 /[Ll]ibrary/[Pp]ackageCache
 
 .idea/
+
+/[Aa]ssets/[Tt]extMesh\ Pro/
+/[Aa]ssets/[Tt]extMesh\ Pro.meta
